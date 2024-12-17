@@ -1,0 +1,18 @@
+homeassistant: true
+frontend: true
+mqtt:
+  base_topic: zigbee2mqtt
+  server: 'mqtt://10.80.20.20:1883'
+  user: '!secret.yaml user'
+  password: '!secret.yaml password'
+serial:
+  port: tcp://10.80.20.60:6638
+ota:
+  disable_automatic_update_check: true
+availability: true
+advanced:
+  last_seen: ISO_8601
+  network_key: '!secret.yaml network_key'
+  pan_id: 36285
+  ext_pan_id: [152, 50, 218, 187, 62, 40, 251, 252]
+  channel: 25

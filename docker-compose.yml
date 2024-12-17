@@ -1,0 +1,12 @@
+services:
+  zigbee2mqtt-garage:
+    container_name: zigbee2mqtt-garage
+    environment:
+      - TZ=Europe/Madrid
+    image: koenkk/zigbee2mqtt:1.42.0
+    ports:
+      - 8080:8080
+    restart: unless-stopped
+    user: 1000:1000
+    volumes:
+      - ${PWD}/garage:/app/data
